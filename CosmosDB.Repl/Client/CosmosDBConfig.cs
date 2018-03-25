@@ -17,7 +17,7 @@ namespace CosmosDB.Repl.Utilities
             _graphClient = new Lazy<ICosmosGraphClient>(
                () =>
                {
-                   return CosmosGraphClient.GetCosmosClient(Account, AuthKey, Database, Collection);
+                   return CosmosGraphClient.GetCosmosClient(Account, Database, Collection, AuthKey);
                });
         }
 

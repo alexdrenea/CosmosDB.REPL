@@ -57,7 +57,6 @@ namespace CosmosDB.Repl.Client
             {
                 using (var client = new GremlinClient(_server))
                 {
-
                     var result = await client.SubmitAsync<T>(queryString);
                     return new CosmosResponse<IEnumerable<T>> { Result = result.ToArray(), RU = -1 };
                 }
