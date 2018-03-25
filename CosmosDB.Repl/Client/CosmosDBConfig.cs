@@ -17,8 +17,7 @@ namespace CosmosDB.Repl.Utilities
             _graphClient = new Lazy<ICosmosGraphClient>(
                () =>
                {
-                   var endpoint = $"{Account}.gremlin.cosmosdb.azure.com";
-                   return CosmosGraphClient.GetCosmosClient(endpoint, AuthKey, Database, Collection);
+                   return CosmosGraphClient.GetCosmosClient(Account, AuthKey, Database, Collection);
                });
         }
 

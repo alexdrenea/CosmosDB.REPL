@@ -7,6 +7,7 @@ namespace CosmosDB.Repl.Utilities
    public class ConsoleLogger : ILogger
     {
         private readonly LogLevel _level;
+
         public ConsoleLogger(LogLevel level = LogLevel.All)
         {
             _level = level;
